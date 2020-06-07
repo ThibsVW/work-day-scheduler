@@ -69,3 +69,24 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+#schedule {
+display: grid;
+margin : 0 auto;
+box-shadow : 0 2px 20px black;
+}
+
+#titles {
+
+  text-align: center;
+  background-color: cadetblue;
+  color: azure;
+  margin-bottom: 0.5rem;
+  padding-top: 20px;
+  font-size: x-large;
+}
+
+#clock{
+  font-size: xx-large;
+  color: #ff6961;
+}

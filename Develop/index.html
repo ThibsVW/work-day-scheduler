@@ -20,19 +20,73 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
+
   </head>
 
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+      <div id="clock"></div>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+    <div id ="titles"class="container">
+      <div class="row">
+        <div class="col-3 col-md-2">Time</div>
+        <div class="col-12 col-sm-6 col-md-8">Tasks</div>
+        <div class="col-3 col-md-2">Save it</div>
+      </div>
+     </div>
+     <div id="schedule" class="container">
+
+     <div id ="dairy" class="container">
+      <div class="row">
+        <div class="col-3 col-md-2">9AM</div>
+        <div class="col-12 col-sm-6 col-md-8">Tasks</div>
+        <div class="col-3 col-md-2">Save it</div>
+      </div>
+      <div class="row">
+        <div class="col-3 col-md-2">10AM</div>
+        <div class="col-12 col-sm-6 col-md-8">Tasks</div>
+        <div class="col-3 col-md-2">Save it</div>
+      </div>
+      <div class="row">
+        <div class="col-3 col-md-2">11AM</div>
+        <div class="col-12 col-sm-6 col-md-8">Tasks</div>
+        <div class="col-3 col-md-2">Save it</div>
+      </div>
+      <div class="row">
+        <div class="col-3 col-md-2">12PM</div>
+        <div class="col-12 col-sm-6 col-md-8">Tasks</div>
+        <div class="col-3 col-md-2">Save it</div>
+      </div>
+      <div class="row">
+        <div class="col-3 col-md-2">1PM</div>
+        <div class="col-12 col-sm-6 col-md-8">Tasks</div>
+        <div class="col-3 col-md-2">Save it</div>
+      </div>
+      <div class="row">
+        <div class="col-3 col-md-2">2PM</div>
+        <div class="col-12 col-sm-6 col-md-8">Tasks</div>
+        <div class="col-3 col-md-2">Save it</div>
+      </div>
+      <div class="row">
+        <div class="col-3 col-md-2">3PM</div>
+        <div class="col-12 col-sm-6 col-md-8">Tasks</div>
+        <div class="col-3 col-md-2">Save it</div>
+      </div>
+      <div class="row">
+        <div class="col-3 col-md-2">4PM</div>
+        <div class="col-12 col-sm-6 col-md-8">Tasks</div>
+        <div class="col-3 col-md-2">Save it</div>
+      </div>
+      <div class="row">
+        <div class="col-3 col-md-2">5PM</div>
+        <div class="col-12 col-sm-6 col-md-8">Tasks</div>
+        <div class="col-3 col-md-2">Save it</div>
+      </div>
+     </div>
     </div>
-
-
 <!-- read documentation on MOMENT.JS. Add events to a daily planner -->
 
 <!-- 1. current day is displayed at the top of the calendar  -->
@@ -50,23 +104,24 @@
 
 $(document).ready(function() {
 
-//moment object 
-let m = moment().format('LLLL');
 
-console.log(m)
+// Set date and time via moment.js
 
+const clock = document.getElementById("clock");
 
+setInterval (() => {
+  const now = moment ();
+  const humanReadable = now.format("LLLL");
+  clock.textContent = humanReadable;
+})
 
-
-
-
-
-
-
-//jquery ready closing brackets 
+ 
 });
     </script>
 
 
   </body>
 </html>
+
+
+
