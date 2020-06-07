@@ -74,16 +74,24 @@ textarea{
 display: grid;
 margin : 0 auto;
 box-shadow : 0 2px 20px black;
+border-style: solid ;
+border-color: cadetblue;
+background-color: rgb(226, 245, 245);
 }
+
 
 #titles {
 
   text-align: center;
   background-color: cadetblue;
-  color: azure;
+  color:white;
   margin-bottom: 0.5rem;
   padding-top: 20px;
   font-size: x-large;
+  border-style: solid ;
+  border-color: grey;
+  text-align: center;
+
 }
 
 #clock{
