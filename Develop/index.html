@@ -32,7 +32,41 @@
       <!-- Timeblocks go here -->
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+<!-- read documentation on MOMENT.JS. Add events to a daily planner -->
+
+<!-- 1. current day is displayed at the top of the calendar  -->
+<!-- 2. timblocks displayed for standard business hours (7am to 9am grey ---9am to 5pm (business -- 5pm to 7pm    grey)    -->
+<!--  3. view timeblocks is color coded to indicate if it is past, present or futur -->
+<!--  4. when click on timeblock i can add an event  -->
+<!--  5. link a save button for each timeblock and save content into local storage -->
+<!--  6. Saved events persist when the page is refreshed  -->
+
+<script src="../Assets/moment.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+//moment object 
+let m = moment().format('LLLL');
+
+console.log(m)
+
+
+
+
+
+
+
+
+
+//jquery ready closing brackets 
+});
+    </script>
+
+
   </body>
 </html>
