@@ -1,132 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6cbff65fb8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Day Planner</title>
   </head>
-
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <div id="clock"></div>
+      <p id="subtitle" class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div id ="titles"class="container">
-      <div class="row">
-        <div class="col-3 col-md-2">Time</div>
-        <div class="col-12 col-sm-6 col-md-8">Tasks</div>
-      </div>
-     </div>
+      <form id='formPlanner'>
+    <div class="container" id="plannerContainer">
+  
+    </div>    
+      </form>
 
-     <div id="schedule" class="container ">
-     <div id ="dairy" class="container">
-      <div class="row">
-        <div class="col-3 col-md-2">9AM</div>
-        <input type = "text" class="col-12 col-sm-6 col-md-8 form-control">
-        <button class="col-3 col-md-1 btn btn-primary" type="submit" value="Submit">Save</button>
-      </div>
-      <div class="row">
-        <div class="col-3 col-md-2">10AM</div>
-        <input type = "text" class="col-12 col-sm-6 col-md-8 form-control">
-        <button class="col-3 col-md-1 btn btn-primary" type="submit" value="Submit">Save</button>
-      </div>
-      <div class="row">
-        <div class="col-3 col-md-2">11AM</div>
-        <input type = "text" class="col-12 col-sm-6 col-md-8 form-control">
-        <button class="col-3 col-md-1 btn btn-primary" type="submit" value="Submit">Save</button>
-      </div>
-      <div class="row">
-        <div class="col-3 col-md-2">12PM</div>
-        <input type = "text" class="col-12 col-sm-6 col-md-8 form-control">
-        <button class="col-3 col-md-1 btn btn-primary" type="submit" value="Submit">Save</button>
-      </div>
-      <div class="row">
-        <div class="col-3 col-md-2">1PM</div>
-        <input type = "text" class="col-12 col-sm-6 col-md-8 form-control">
-        <button class="col-3 col-md-1 btn btn-primary" type="submit" value="Submit">Save</button>
-      </div>
-      <div class="row">
-        <div class="col-3 col-md-2">2PM</div>
-        <input type = "text" class="col-12 col-sm-6 col-md-8 form-control">
-        <button class="col-3 col-md-1 btn btn-primary" type="submit" value="Submit">Save</button>
-      </div>
-      <div class="row">
-        <div class="col-3 col-md-2">3PM</div>
-        <input type = "text" class="col-12 col-sm-6 col-md-8 form-control">
-        <button class="col-3 col-md-1 btn btn-primary" type="submit" value="Submit">Save</button>
-      </div>
-      <div class="row">
-        <div class="col-3 col-md-2">4PM</div>
-        <input type = "text" class="col-12 col-sm-6 col-md-8 form-control">
-        <button class="col-3 col-md-1 btn btn-primary" type="submit" value="Submit">Save</button>
-      </div>
-      <div class="row">
-        <div class="col-3 col-md-2">5PM</div>
-        <input type = "text" class="col-12 col-sm-6 col-md-8 form-control">
-        <button class="col-3 col-md-1 btn btn-primary" type="submit" value="Submit">Save</button>
-      </div>
-     </div>
-    </div>
-<!-- read documentation on MOMENT.JS. Add events to a daily planner -->
+  <!-- Start Footer -->
+    <nav class="navbar fixed-bottom footer">
+        <div class="footer-text">An original planner by Thibs</div>
+    </nav>
 
-<!-- 1. current day is displayed at the top of the calendar  -->
-<!-- 2. timblocks displayed for standard business hours (7am to 9am grey ---9am to 5pm (business -- 5pm to 7pm    grey)    -->
-<!--  3. view timeblocks is color coded to indicate if it is past, present or futur -->
-<!--  4. when click on timeblock i can add an event  -->
-<!--  5. link a save button for each timeblock and save content into local storage -->
-<!--  6. Saved events persist when the page is refreshed  -->
-
-<script src="../Assets/moment.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
-<script>
-
-$(document).ready(function() {
-
-
-// Set date and time via moment.js
-
-const clock = document.getElementById("clock");
-
-setInterval (() => {
-  const now = moment ();
-  const humanReadable = now.format("LLLL");
-  clock.textContent = humanReadable;
-})
-
- 
-
-
-
-
-
- 
-});
-    </script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js" integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs=" crossorigin="anonymous"></script>
+    <script src='script.js'></script>
   </body>
 </html>
-
-
-
