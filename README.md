@@ -18,5 +18,7 @@ The application is using  [Moment.js](https://momentjs.com/) library to work wit
 6. Local storage saves down information processed.
 
 
+## Website 
 
+[Work Day Scheduler Website](https://thibsvw.github.io/work-day-scheduler/)
 
