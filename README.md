@@ -22,3 +22,7 @@ The application is using  [Moment.js](https://momentjs.com/) library to work wit
 
 [Work Day Scheduler Website](https://thibsvw.github.io/work-day-scheduler/)
 
+
+## Screenshot
+
+![screenshot](https://user-images.githubusercontent.com/64518932/85186621-c7009c80-b2cc-11ea-8169-2b0cc445c0f2.JPG)
